@@ -4,7 +4,7 @@ const debug = _debug();
 export default (Model, { deletedAt = 'deletedAt', _isDeleted = '_isDeleted', scrub = false, customDeletedAtDefinition = {}, customIsDeletedDefinition = {} }) => {
   debug('SoftDelete mixin for Model %s', Model.modelName);
 
-  debug('options', { deletedAt, _isDeleted, scrub });
+  debug('options', { deletedAt, _isDeleted, scrub, customDeletedAtDefinition, customIsDeletedDefinition });
 
   const properties = Model.definition.properties;
 
